@@ -1,0 +1,13 @@
+[tools]
+argocd = "3.3"
+cue = "0.16"
+fzf = "0.72"
+helm = "4.1"
+kind = "0.31"
+krew = "0.5"
+kubebuilder = "4.14"
+kubectl = "1.35"
+kubectx = "0.11"
+kubens = "0.11"
+kustomize = "5.8"
+yq = "4.53.2"
