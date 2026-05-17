@@ -31,6 +31,10 @@ type GroupSpec struct {
 	// The following markers will use OpenAPI v3 schema to validate the value
 	// More info: https://book.kubebuilder.io/reference/markers/crd-validation.html
 
+	// Endpoint defines the configuration for connecting to the Authentik endpoint.
+	// +required
+	Endpoint AuthentikEndpoint `json:"endpoint"`
+
 	// The name of the group.
 	// +required
 	// +kubebuilder:validation:MinLength=1
