@@ -17,6 +17,7 @@ limitations under the License.
 package v1alpha1
 
 import (
+	apiextensionsv1 "k8s.io/apiextensions-apiserver/pkg/apis/apiextensions/v1"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 )
 
@@ -67,7 +68,7 @@ type GroupSpec struct {
 	// behavior of a group.
 	// +optional
 	// +mapType=granular
-	Attributes map[string]any `json:"attributes,omitempty"`
+	Attributes map[string]apiextensionsv1.JSON `json:"attributes,omitempty"`
 }
 
 // GroupStatus defines the observed state of Group.
