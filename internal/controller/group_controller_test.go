@@ -52,6 +52,12 @@ var _ = Describe("Group Controller", func() {
 						Namespace: "default",
 					},
 					// TODO(user): Specify other spec details if needed.
+					Spec: akv1alpha1.GroupSpec{
+						Name: "test-group",
+						Endpoint: akv1alpha1.AuthentikEndpoint{
+							Host: "http://localhost:8080",
+						},
+					},
 				}
 				Expect(k8sClient.Create(ctx, resource)).To(Succeed())
 			}

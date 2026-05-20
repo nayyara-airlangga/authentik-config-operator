@@ -48,21 +48,18 @@ type GroupSpec struct {
 	// be parents for this group.
 	// +optional
 	// +listType=set
-	// +kubebuilder:validation:UniqueItems=true
 	Parents []string `json:"parents,omitempty"`
 
 	// users is a list of integers which are the IDs of users that will be
 	// part of this group.
 	// +optional
 	// +listType=set
-	// +kubebuilder:validation:UniqueItems=true
 	Users []int64 `json:"users,omitempty"`
 
 	// roles is a list of UUIDs which are the IDs of roles that are going to
 	// be assigned to this group.
 	// +optional
 	// +listType=set
-	// +kubebuilder:validation:UniqueItems=true
 	Roles []string `json:"roles,omitempty"`
 
 	// atrributes are a map of key-value pairs wich can be specified as extra
